@@ -47,6 +47,7 @@ public class ShopTypeServiceImpl extends ServiceImpl<ShopTypeMapper, ShopType> i
         //5.查到数据，写回缓存，返回
         stringRedisTemplate.opsForValue().set("shop_type", JSONUtil.toJsonStr(shopTypeList));
         return Result.ok(shopTypeList);
+
     }
 }
 
